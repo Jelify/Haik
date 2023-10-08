@@ -72,3 +72,5 @@ Plugins/*/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
+Content/Kobo_Nature/Levels/L-Demo.umap
+Content/Kobo_Nature/Levels/L-Overview.umap
