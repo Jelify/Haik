@@ -84,6 +84,9 @@ void AHaikCharacter::SetupPlayerInputComponent(class UInputComponent* PlayerInpu
 		//Looking
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &AHaikCharacter::Look);
 
+		//Interaction
+		EnhancedInputComponent->BindAction(InteractAction, ETriggerEvent::Triggered, this, &AHaikCharacter::Interact);
+
 	}
 
 }
@@ -122,6 +125,11 @@ void AHaikCharacter::Look(const FInputActionValue& Value)
 		AddControllerYawInput(LookAxisVector.X);
 		AddControllerPitchInput(LookAxisVector.Y);
 	}
+}
+
+void AHaikCharacter::Interact(const FInputActionValue& Value)
+{
+	UE_LOG(LogTemp, Warning, TEXT("Interacted"));
 }
 
 
